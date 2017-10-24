@@ -10,11 +10,22 @@ RSpec.describe Nutrientes do
   end
 
   describe Alimento do
+	before :each do	
+		@Aliment = Alimento.new("Yogurt",[3.8])
+	end
+
+
+
+
+
+  describe Alimento do
     it "Debe existir un nombre para cada alimento" do
-      expect(Alimento.new("Yogurt").nombre).to eq("Yogurt")
+      expect(@Aliment.nombre).to eq("Yogurt")
     end
     	it "Debe existir la cantidad de proteínas del alimento en gramos" do
-    		expect(Alimento.new("Yogurt",[3.8]).proteinas).to eq(3.8)
+    		expect(@Aliment.proteinas).to eq([3.8])
 	end
   end
+end
+
 end
