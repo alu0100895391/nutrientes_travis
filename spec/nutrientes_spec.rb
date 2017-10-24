@@ -27,6 +27,11 @@ RSpec.describe Nutrientes do
     it "Debe exixtir la cantidad de grasas del alimento en gramos" do
 	expect(@Aliment.grasas).not_to be nil
     end
+    it "Existe un m´etodo para obtener el nombre del alimento." do
+  	expect(@Aliment.nombre).to eq("Yogurt")
+    end
+
+
   end
 end
 
