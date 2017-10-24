@@ -10,4 +10,7 @@ class Alimento
      @glucidos = glucidos
      @grasas = grasas
   end
+  def to_s
+	 "#{@nombre}\t#{@proteinas}\t#{@glucidos}\t#{@grasas}"
+  end
 end
