@@ -36,7 +36,10 @@ RSpec.describe Nutrientes do
     it "Existe un método  para obtener la cantidad de glúcidos de un alimento." do
         expect(@Aliment.glucidos).to eq(4.9)
     end
- 
+    it "Existe un método  para obtener la cantidad de grasas de un alimento." do
+        expect(@Aliment.grasas).to eq(3.8)
+    end
+
 	
 
 
