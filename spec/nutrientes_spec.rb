@@ -10,5 +10,8 @@ RSpec.describe Nutrientes do
   end
 
   describe Alimento do
+    it "Debe existir un nombre para cada alimento" do
+      expect(Alimento.new("Yogurt")).to eq("Yogurt")
+    end
   end
 end
