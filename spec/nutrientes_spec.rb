@@ -39,7 +39,9 @@ RSpec.describe Nutrientes do
     it "Existe un método  para obtener la cantidad de grasas de un alimento." do
         expect(@Aliment.grasas).to eq(3.8)
     end
-
+    it "Existe un método para obtener el alimento formateado" do
+	expect(@Aliment.to_s).to eq("Yogurt\t3.8\t4.9\t3.8")
+    end
 	
 
 
