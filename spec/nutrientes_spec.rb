@@ -11,7 +11,7 @@ RSpec.describe Nutrientes do
 
   describe Alimento do
 	before :each do	
-		@Aliment = Alimento.new("Yogurt",3.8,4.9)
+		@Aliment = Alimento.new("Yogurt",3.8,4.9,3.8)
 	end
 
 
@@ -23,6 +23,9 @@ RSpec.describe Nutrientes do
     end
     it "Debe existir la cantidad de glúcidos del alimento en gramos" do
 	expect(@Aliment.glucidos).not_to be nil
+    end
+    it "Debe exixtir la cantidad de grasas del alimento en gramos" do
+	expect(@Aliment.grasas).not_to be nil
     end
   end
 end
