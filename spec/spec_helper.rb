@@ -1,6 +1,6 @@
 require "bundler/setup"
 require "nutrientes"
-
+require_relative "../lib/nutrientes/lista.rb"
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
   config.example_status_persistence_file_path = ".rspec_status"
