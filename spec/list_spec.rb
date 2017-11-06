@@ -8,7 +8,10 @@ it "does something useful" do
 context "#Debe existir un nodo y una lista" do
 
 	before :each do 
-		@list = Lista.new(1,8)
+		@nodo = Node.new(1,nil,nil)
+		@nodo1 = Node.new(3,nil,@nodo)
+		@nodo.next=@nodo1
+		@list = Lista.new(@nodo,@nodo1)
 	end
 
 
@@ -22,9 +25,23 @@ context "#Debe existir un nodo y una lista" do
 
 end
 context "#Inserciones" do
+
+ before :each do
+                @nodo = Node.new(1,nil,nil)
+                @nodo1 = Node.new(3,nil,@nodo)
+                @nodo.next=@nodo1
+                @list = Lista.new(@nodo,@nodo1)
+        end
+
+
+
+
+
+
+
 	it "Se puede insertar un elemento en la Lista" do
 		@list.insertar(4)
-		expect(@list.tail).to eq(4)
+		expect(@list.tail.value).to eq(4)
 	end
 
 end
