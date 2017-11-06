@@ -47,4 +47,29 @@ context "#Inserciones" do
 
 
 end
+
+context "#Extracciones" do
+
+ before :each do
+                @nodo = Node.new(1,nil,nil)
+                @nodo1 = Node.new(3,nil,@nodo)
+                @nodo.next=@nodo1
+                @list = Lista.new(@nodo,@nodo1)
+        end
+
+	it "Se extrae el primer elemento de la Lista" do
+		@list.extraer_head
+		expect(@list.to_s).to eq("3\n")
+
+	end
+
+
+
+
+
+end
+
+
+
+
 end
