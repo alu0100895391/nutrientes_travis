@@ -40,6 +40,16 @@ class Lista
 	end
 
 
+	def extraer_head 
+	
+	self.head = self.head.next
+	self.head.prev = nil
+
+	end
+
+
+
+
 
 	def to_s
 		cad=""
