@@ -59,6 +59,15 @@ context "#Comprobar clase, jerarquía" do
 		expect(@yogurt.class).to eq(Huevosylacteos)
 	end
 
+	it "Comprobar la pertenencia a una jerarquía" do
+		expect(@yogurt.is_a? Alimento).to eq(true) 
+	end
+
+
+
+
+
+
 end
 
 
