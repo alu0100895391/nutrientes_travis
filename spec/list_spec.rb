@@ -33,16 +33,18 @@ context "#Inserciones" do
                 @list = Lista.new(@nodo,@nodo1)
         end
 
-
-
-
-
-
-
 	it "Se puede insertar un elemento en la Lista" do
 		@list.insertar(4)
 		expect(@list.tail.value).to eq(4)
+
 	end
+
+
+	it "Se pueden insertar varios elementos en la Lista" do
+		@list.insertar(7,6,9)
+		expect(@list.to_s).to eq("1\n3\n7\n6\n9\n")
+	end
+
 
 end
 end

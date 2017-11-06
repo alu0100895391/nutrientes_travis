@@ -1,25 +1,56 @@
-
-
 Node = Struct.new(:value, :next, :prev)
 
 Lista = Struct.new(:head, :tail)
 
 class Lista
 
-	def insertar valor
+#	def insertar valor
+#
+#		nodo = Node.new(valor,nil,nil)
+#	
+#		if self.head == nil
+#			self.head = nodo
+#			self.tail = nodo
+#		else
+#	
+#			nodo.prev = self.tail	
+#			self.tail.next = nodo
+#			self.tail = nodo
+#
+#		end
+#	end
 
-	nodo = Node.new(valor,nil,nil)
+	def insertar *valores
 	
-	if self.head == nil
-		self.head = nodo
-		self.tail = nodo
-	else
-	
-	nodo.prev = self.tail	
-	self.tail.next = nodo
-	self.tail = nodo
+	valores.each do |valor|
+		nodo = Node.new(valor,nil,nil)
+       
+               if self.head == nil
+                       self.head = nodo
+                       self.tail = nodo
+               else
+       
+                       nodo.prev = self.tail   
+                       self.tail.next = nodo
+                       self.tail = nodo
+
+               end
 
 	end
+	end
+
+
+
+	def to_s
+		cad=""
+		nodo = self.head
+		while nodo != nil
+			cad += nodo.value.to_s + "\n"
+			nodo = nodo.next
+			
+		end
+
+		cad
 	end
 
 
