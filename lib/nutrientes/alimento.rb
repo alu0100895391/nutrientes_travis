@@ -21,3 +21,8 @@ class Alimento
   end
 
 end
+
+
+class Huevosylacteos < Alimento
+
+end
