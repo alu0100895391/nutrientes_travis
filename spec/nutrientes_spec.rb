@@ -48,6 +48,26 @@ RSpec.describe Nutrientes do
 
 
   end
+
+context "#Comprobar clase, jerarquía" do
+        before :each do
+                @yogurt = Huevos_lacteos.new("Yogurt",3.8,4.9,3.8)
+
+        end
+	
+	it "Comprobar la clase de un objeto" do
+		expect(@yogurt.class).to eq(Huevos_laccteos)
+	end
+
+end
+
+
+
+
+
+
+
+
 end
 
 
