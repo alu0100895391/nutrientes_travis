@@ -63,8 +63,10 @@ context "#Extracciones" do
 
 	end
 
-
-
+	it "Se extrae el último elemento de la lista" do
+		@list.extraer_tail
+		expect(@list.to_s).to eq("1\n")
+	end
 
 
 end
