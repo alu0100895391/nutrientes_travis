@@ -20,8 +20,12 @@ context "#Debe existir un nodo y una lista" do
                 expect(@list.tail).not_to be nil
         end
 
-
-
+end
+context "#Inserciones" do
+	it "Se puede insertar un elemento en la Lista" do
+		@list.insertar(4)
+		expect(@list.tail).to eq(4)
+	end
 
 end
 end
