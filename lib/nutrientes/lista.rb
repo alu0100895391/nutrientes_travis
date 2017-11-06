@@ -42,12 +42,15 @@ class Lista
 
 	def extraer_head 
 	
-	self.head = self.head.next
-	self.head.prev = nil
-
+		self.head = self.head.next
+		self.head.prev = nil
 	end
 
 
+	def extraer_tail
+		self.tail = self.tail.prev
+		self.tail.next = nil
+	end
 
 
 
