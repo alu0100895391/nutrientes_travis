@@ -118,7 +118,10 @@ it "Extraemos el primer alimento" do
 
         end
 
-
+	it "Extraer el último alimento" do
+		@list.extraer_tail
+		expect(@list.tail.value.to_s).to eq("Platanos\t1.2\t21.4\t0.2")
+	end
 
 
 
