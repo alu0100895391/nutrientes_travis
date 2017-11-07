@@ -66,6 +66,10 @@ context "#Comprobar clase, jerarquía,tipo de objeto" do
 	it "Comprobar el tipo de un objeto" do
 		expect(@yogurt.respond_to?(:val_energetico))
 	end
+
+	it "Comprobar el tipo de un objeto 2" do
+		expect(@yogurt.respond_to?(:proteinas))
+	end
 	
 
 
