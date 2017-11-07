@@ -14,6 +14,16 @@ context "#Debe existir un nodo y una lista" do
 		@list = Lista.new(@nodo,@nodo1)
 	end
 
+	it "Debe existir un nodo con su valor" do
+                expect(@nodo.value).to eq(1)
+        end
+        it "Debe existir un nodo con su valor" do
+                expect(@nodo.next).not_to be nil
+        end
+
+        it "Debe existir un nodo con su valor" do
+                expect(@nodo.prev).to be nil
+        end
 
 
 	it "Debe existir una lista con su cabeza" do

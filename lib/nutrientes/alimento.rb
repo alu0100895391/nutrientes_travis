@@ -23,6 +23,11 @@ class Alimento
 end
 
 
-class Huevosylacteos < Alimento
+class Tipo_alimento  < Alimento
+
+	def initialize(nombre,proteinas,glucidos,grasas,tipo)
+		super(nombre,proteinas,glucidos,grasas)
+		@tipo_a = tipo
+	end
 
 end
