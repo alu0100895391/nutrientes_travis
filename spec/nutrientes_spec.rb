@@ -108,6 +108,14 @@ context " Comprobar si la clase alimento es comparable" do
                 expect(@yogurt == @yogurt).to eq(true)
         end
 
+
+	it "Comprobar que el valor energético de dos alimentos son diferentes" do
+                expect(@yogurt == @huevo).to eq(false)
+        end
+
+
+
+
 	it "Comprobar que el valor energético de un  alimento y un tipo_alimento se pueden comparar" do
                 expect(@yogurt < @leche).to eq(false)
         end
