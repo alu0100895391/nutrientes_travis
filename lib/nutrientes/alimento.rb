@@ -1,4 +1,8 @@
+
+
 class Alimento
+ include Comparable
+
  attr_reader :nombre
  attr_reader :proteinas
  attr_reader :glucidos
@@ -19,6 +23,20 @@ class Alimento
   def val_energetico
 	@valor = 10*@proteinas+20*@glucidos+9*@grasas
   end
+
+
+def <=>(other) 
+
+return nil unless other.instance_of? Alimento
+
+val_energetico <=> other.val_energetico
+
+end
+
+
+
+
+
 
 end
 

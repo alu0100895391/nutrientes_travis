@@ -87,7 +87,7 @@ context " Comprobar si la clase alimento es comparable" do
 	end
 
 	it "Comprobar si el valor energito de un alimento es menor que el de otro" do
-		expect(@yogurt <  @huevo).to eq(false)
+		expect(@yogurt <  @huevo).to eq(true)
 	end
 
 
