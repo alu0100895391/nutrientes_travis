@@ -21,7 +21,7 @@ class Alimento
   end
 
   def val_energetico
-	@valor = 10*@proteinas+20*@glucidos+9*@grasas
+	@valor = 4*@proteinas+4*@glucidos+9*@grasas
   end
 
 

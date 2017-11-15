@@ -43,7 +43,7 @@ RSpec.describe Nutrientes do
 	expect(@Aliment.to_s).to eq("Yogurt\t3.8\t4.9\t3.8")
     end
     it "Existe un método para obtener el valor energético de un alimento" do
-	expect(@Aliment.val_energetico).to eq(170.2)
+	expect(@Aliment.val_energetico).to eq(69.0)
     end	
 
 

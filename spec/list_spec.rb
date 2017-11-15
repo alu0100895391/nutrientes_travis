@@ -154,6 +154,17 @@ before :each do
         Tipo_alimento.new("Platanos", 1.2, 21.4, 0.2, "Frutas"),
         Tipo_alimento.new("Pera",  0.5, 12.7, 0.3, "Frutas")
         )
+
+	@lista = Lista.new(nil,nil)
+                @lista.insertar(3,2,4,1)
+	
+	@lista2 = Lista.new(nil,nil)
+                @lista2.insertar(3,nil,4,1)
+	@lista3 = Lista.new(nil,nil)
+		@lista3.insertar(nil,nil,nil)
+	@lista4 = Lista.new(nil,nil)
+                @lista4.insertar(1,2,3,4,5,6,7,8,9)
+
 end
 
 
@@ -162,8 +173,45 @@ end
 		expect(@list.min.to_s).to eq("Tomate\t1.0\t3.5\t0.2")
 	end
 
+	it "Comprobar si devuelve el mayor de la lista" do
+                expect(@list.max.to_s).to eq("Aceite de oliva\t0.0\t0.2\t99.6")
+        end
+
+	it "Comprobar que ordena la lista" do
+		expect(@lista.sort).to eq([1, 2, 3, 4])
+	end
+	
+	it "Comprobar el método all?" do
+		expect(@lista.all?).to eq(true)
+		expect(@lista2.all?).to eq(false)		
+	end
 
 
+	it "Comprobar el método any?" do
+                expect(@lista2.any?).to eq(true)
+		expect(@lista3.any?).to eq(false)
+        end
+	
+	it "Comprobar el método collect" do
+		expect(@lista.collect{|i| i*i}).to eq([9, 4, 16, 1])
+	end
+
+
+	it "Comprobar el método count" do
+		expect(@lista.count).to eq(4)
+	end
+
+	it "Comprobar el metodo drop" do
+		expect(@lista4.drop(4)).to eq([5, 6, 7, 8, 9])
+	end
+
+	it "Comprobar el método detect" do
+                expect(@lista.detect{|i| i == 4 }).to eq(4)
+		expect(@lista.detect{|i| i == 8 }).to eq(nil)
+        end
+
+
+	
 end
 
 
