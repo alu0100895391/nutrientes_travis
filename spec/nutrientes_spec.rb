@@ -80,7 +80,18 @@ context "#Comprobar clase, jerarquía,tipo de objeto" do
 end
 
 
+context " Comprobar si la clase alimento es comparable" do
+	before :each do
+		@yogurt = Alimento.new("Yogurt",3.8,4.9,3.8)
+		@huevo = Alimento.new("Huevo",14.1,0.0,19.1)
+	end
 
+	it "Comprobar si el valor energito de un alimento es menor que el de otro" do
+		expect(@yogurt <  @huevo).to eq(false)
+	end
+
+
+end
 
 
 
