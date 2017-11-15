@@ -1,0 +1,16 @@
+Wed, 15 Nov 2017 14:56:47 +0000
+./lib/nutrientes.rb	Mon, 06 Nov 2017 16:35:14 +0000
+./lib/nutrientes/version.rb	Mon, 06 Nov 2017 16:24:32 +0000
+./lib/nutrientes/alimento.rb	Wed, 15 Nov 2017 14:53:46 +0000
+./lib/nutrientes/lista.rb	Wed, 15 Nov 2017 14:53:26 +0000
+./bin/setup	Tue, 24 Oct 2017 11:35:32 +0100
+./bin/console	Tue, 24 Oct 2017 11:35:32 +0100
+./nutrientes.gemspec	Mon, 06 Nov 2017 15:56:56 +0000
+./spec/nutrientes_spec.rb	Wed, 15 Nov 2017 13:00:52 +0000
+./spec/spec_helper.rb	Mon, 06 Nov 2017 16:03:51 +0000
+./spec/list_spec.rb	Wed, 15 Nov 2017 13:59:24 +0000
+./Gemfile.lock	Mon, 06 Nov 2017 15:57:18 +0000
+./Gemfile	Tue, 24 Oct 2017 11:35:32 +0100
+./README.md	Mon, 06 Nov 2017 16:35:14 +0000
+./Rakefile	Tue, 24 Oct 2017 11:35:32 +0100
+./Guardfile	Mon, 06 Nov 2017 15:57:45 +0000
