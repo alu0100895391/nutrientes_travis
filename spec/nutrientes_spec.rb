@@ -51,7 +51,7 @@ RSpec.describe Nutrientes do
 
 context "#Comprobar clase, jerarquía,tipo de objeto" do
         before :each do
-                @yogurt = Tipo_alimento.new("Yogurt",3.8,4.9,3.8,"Huevitos")
+                @yogurt = Tipo_alimento.new("Yogurt",3.8,4.9,3.8,"Huevos y lácteos")
 
         end
 	
@@ -84,11 +84,34 @@ context " Comprobar si la clase alimento es comparable" do
 	before :each do
 		@yogurt = Alimento.new("Yogurt",3.8,4.9,3.8)
 		@huevo = Alimento.new("Huevo",14.1,0.0,19.1)
+		@list = Lista.new(nil,nil)
+		 @leche = Tipo_alimento.new("leche",3.5,4.7,3.8,"Huevos y lácteos")
 	end
 
-	it "Comprobar si el valor energito de un alimento es menor que el de otro" do
+	it "Comprobar si el valor energético de un alimento es menor que el de otro" do
 		expect(@yogurt <  @huevo).to eq(true)
 	end
+
+	it "Comprobar si el valor energético de un alimento es mayor que el de el otro" do
+		expect(@yogurt > @huevo).to eq(false)
+	end 
+	
+	it "Comprobar que no se puede comparar el valor energético con una instancia de otra clase" do
+		expect(@yogurt == @list).to eq(false)
+	end
+
+	it "Comprobar que no se puede comparar el valor energético con un número" do
+		expect(@yogurt ==  2).to eq(false)
+	end
+
+	it "Comprobar que el valor energético de dos alimentos es igual" do
+                expect(@yogurt == @yogurt).to eq(true)
+        end
+
+	it "Comprobar que el valor energético de un  alimento y un tipo_alimento se pueden comparar" do
+                expect(@yogurt < @leche).to eq(false)
+        end
+
 
 
 end

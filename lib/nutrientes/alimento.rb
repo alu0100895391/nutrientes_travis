@@ -27,7 +27,7 @@ class Alimento
 
 def <=>(other) 
 
-return nil unless other.instance_of? Alimento
+return nil unless other.is_a? Alimento
 
 val_energetico <=> other.val_energetico
 
