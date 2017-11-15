@@ -159,7 +159,7 @@ end
 
 
 	it "Comprobar si devuelve el menor de la lista" do
-		expect(@list.min.to_s).to eq("Tomate\t1.0\t3.5\t0.2\tVerduras y Hortalizas")
+		expect(@list.min.to_s).to eq("Tomate\t1.0\t3.5\t0.2")
 	end
 
 

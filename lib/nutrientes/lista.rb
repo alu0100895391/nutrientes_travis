@@ -56,15 +56,19 @@ class Lista
 
 	def to_s
 		cad=""
-		nodo = self.head
-		while nodo != nil
-			cad += nodo.value.to_s + "\n"
-			nodo = nodo.next
-			
-		end
-
+		each { |val| cad += val.to_s + "\n" }
 		cad
 	end
+
+
+def each
+        
+        nodo = self.head
+        while nodo != nil
+                yield nodo.value
+                nodo = nodo.next
+        end
+end
 
 
 
