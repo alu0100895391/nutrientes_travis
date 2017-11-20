@@ -140,10 +140,18 @@ context "Comprobar el cálculo del aibc, el indice glucémico de un individuo y 
 	end
 
 
-	it "Comprobar que calcula el indice glucémico de un individuo" do
+	it "Comprobar que calcula el indice glucémico del individuo 0 " do
 		expect(@c_manzana.ig_ind @c_manzana.datos[0]).to eq(10.742187499999996)
 	end
+	it "Comprobar que calcula el indice glucémico del individuo 0 " do
+                expect(@c_manzana.ig_ind @c_manzana.datos[1]).to eq(98.25737265415549)
+        end
 
+
+
+	it "Comprobar que calcula el indice glucemico de un alimento" do
+		expect(@c_manzana.ig_alimento).to eq(54.499780077077745)
+	end
 
 
 
