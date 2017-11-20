@@ -26,12 +26,13 @@ class Alimento
 
 #Se asignan los valores nombre, proteinas, glucidos, grasas
 
-  def initialize(nombre,proteinas,glucidos,grasas)
+  def initialize(nombre,proteinas,glucidos,grasas,datos)
      @nombre = nombre
      @proteinas = proteinas
      @glucidos = glucidos
      @grasas = grasas
      @valor = 0
+     @datos = datos
   end
 #Formatea la salida de la lista
 
@@ -72,8 +73,8 @@ end
 class Tipo_alimento  < Alimento
 #Se asignan los valores nombre, proteinas, glucidos, grasas
 
-	def initialize(nombre,proteinas,glucidos,grasas,tipo)
-		super(nombre,proteinas,glucidos,grasas)
+	def initialize(nombre,proteinas,glucidos,grasas,datos,tipo)
+		super(nombre,proteinas,glucidos,grasas,datos)
 		@tipo_a = tipo
 	end
 
