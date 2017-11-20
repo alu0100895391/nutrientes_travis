@@ -11,7 +11,7 @@ RSpec.describe Nutrientes do
 
   describe Alimento do
 	before :each do	
-		@Aliment = Alimento.new("Yogurt",3.8,4.9,3.8)
+		@Aliment = Alimento.new("Yogurt",3.8,4.9,3.8,nil)
 	end
 
 
@@ -51,7 +51,7 @@ RSpec.describe Nutrientes do
 
 context "#Comprobar clase, jerarquía,tipo de objeto" do
         before :each do
-                @yogurt = Tipo_alimento.new("Yogurt",3.8,4.9,3.8,"Huevos y lácteos")
+                @yogurt = Tipo_alimento.new("Yogurt",3.8,4.9,3.8,,nil,"Huevos y lácteos")
 
         end
 	
@@ -82,10 +82,10 @@ end
 
 context " Comprobar si la clase alimento es comparable" do
 	before :each do
-		@yogurt = Alimento.new("Yogurt",3.8,4.9,3.8)
-		@huevo = Alimento.new("Huevo",14.1,0.0,19.1)
+		@yogurt = Alimento.new("Yogurt",3.8,4.9,3.8,nil)
+		@huevo = Alimento.new("Huevo",14.1,0.0,19.1,nil)
 		@list = Lista.new(nil,nil)
-		 @leche = Tipo_alimento.new("leche",3.5,4.7,3.8,"Huevos y lácteos")
+		 @leche = Tipo_alimento.new("leche",3.5,4.7,3.8,nil,"Huevos y lácteos")
 	end
 
 	it "Comprobar si el valor energético de un alimento es menor que el de otro" do
@@ -124,10 +124,49 @@ context " Comprobar si la clase alimento es comparable" do
 
 end
 
-
+context "Comprobar el cálculo del aibc, el indice glucémico de un individuo y el índice glucémico de un alimento" do
+	before :each do
+		@huevo=Alimento.new("huevo",14.1,0.0,19.1,[
+                                       [[6.7, 6.5, 6.8, 6.9, 7.0, 7.1, 6.9, 6.9, 6.9, 6.7, 6.9, 7.3, 7.0, 7.0, 7.2, 7.1, 6.8, 7.2, 7.3, 7.0, 6.8, 6.7, 6.8, 6.7, 6.9],
+                                        [4.9, 5.3, 5.9, 6.7, 7.2, 7.6, 8.0, 8.2, 8.2, 8.4, 8.3, 8.3, 8.0, 7.5, 7.1, 6.8, 6.8, 6.9, 6.8, 6.3, 6.2, 6.3, 6.2, 6.3, 6.1]],
+                                       [[4.6, 4.8, 5.3, 5.6, 6.1, 6.5, 6.6, 7.0, 7.0, 6.8, 6.4, 6.3, 6.1, 6.1, 6.2, 6.0, 6.1, 6.1, 6.2, 6.3, 6.4, 6.1, 6.1, 5.7, 5.9],
+                                        [6.3, 5.4, 5.6, 5.7, 6.5, 7.4, 7.9, 7.4, 7.7, 7.9, 7.9, 7.8, 7.8, 7.8, 8.0, 8.5, 9.4, 10.8, 10.5, 9.1, 8.9, 8.3, 7.7, 7.6, 7.5]]])
+                                        
+	end
+end
 
 
 
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
