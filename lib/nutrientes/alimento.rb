@@ -23,7 +23,7 @@ class Alimento
  attr_reader :proteinas
  attr_reader :glucidos
  attr_reader :grasas
-
+ attr_reader :datos
 #Se asignan los valores nombre, proteinas, glucidos, grasas
 
   def initialize(nombre,proteinas,glucidos,grasas,datos)
@@ -47,6 +47,25 @@ class Alimento
   def val_energetico
 	@valor = 4*@proteinas+4*@glucidos+9*@grasas
   end
+
+
+  def aibc datos
+    s = []
+        datos[1..datos.length-1].zip(datos[0..datos.length-2]) { |x,y| s << (((x-datos[0])+(y-datos[0]))/2)*5 }
+        s.reduce(:+)
+ end
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Se define para incluir el mix, max comparable 
 #se toma como valor el valor energético
