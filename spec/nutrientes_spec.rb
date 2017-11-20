@@ -1,5 +1,5 @@
 require "spec_helper"
-#prueba
+
 RSpec.describe Nutrientes do
   it "has a version number" do
     expect(Nutrientes::VERSION).not_to be nil
