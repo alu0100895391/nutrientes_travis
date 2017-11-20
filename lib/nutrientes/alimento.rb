@@ -60,7 +60,11 @@ def ig_ind datos
  end
     
 
-
+def ig_alimento
+     s = @datos.map { |x| ig_ind(x) }
+        s.reduce(:+)/@datos.length
+        
+end
 
 
 
