@@ -51,7 +51,7 @@ RSpec.describe Nutrientes do
 
 context "#Comprobar clase, jerarquía,tipo de objeto" do
         before :each do
-                @yogurt = Tipo_alimento.new("Yogurt",3.8,4.9,3.8,,nil,"Huevos y lácteos")
+                @yogurt = Tipo_alimento.new("Yogurt",3.8,4.9,3.8,nil,"Huevos y lácteos")
 
         end
 	
@@ -126,13 +126,26 @@ end
 
 context "Comprobar el cálculo del aibc, el indice glucémico de un individuo y el índice glucémico de un alimento" do
 	before :each do
-		@huevo=Alimento.new("huevo",14.1,0.0,19.1,[
+		@c_manzana=Alimento.new("c_manzana",14.1,0.0,19.1,[
                                        [[6.7, 6.5, 6.8, 6.9, 7.0, 7.1, 6.9, 6.9, 6.9, 6.7, 6.9, 7.3, 7.0, 7.0, 7.2, 7.1, 6.8, 7.2, 7.3, 7.0, 6.8, 6.7, 6.8, 6.7, 6.9],
                                         [4.9, 5.3, 5.9, 6.7, 7.2, 7.6, 8.0, 8.2, 8.2, 8.4, 8.3, 8.3, 8.0, 7.5, 7.1, 6.8, 6.8, 6.9, 6.8, 6.3, 6.2, 6.3, 6.2, 6.3, 6.1]],
                                        [[4.6, 4.8, 5.3, 5.6, 6.1, 6.5, 6.6, 7.0, 7.0, 6.8, 6.4, 6.3, 6.1, 6.1, 6.2, 6.0, 6.1, 6.1, 6.2, 6.3, 6.4, 6.1, 6.1, 5.7, 5.9],
                                         [6.3, 5.4, 5.6, 5.7, 6.5, 7.4, 7.9, 7.4, 7.7, 7.9, 7.9, 7.8, 7.8, 7.8, 8.0, 8.5, 9.4, 10.8, 10.5, 9.1, 8.9, 8.3, 7.7, 7.6, 7.5]]])
                                         
 	end
+
+	it "Comprobar que realiza el aibc" do
+		expect(@c_manzana.aibc).to eq(27.49999999999999)
+	
+	end
+
+
+
+
+
+
+
+
 end
 
 
