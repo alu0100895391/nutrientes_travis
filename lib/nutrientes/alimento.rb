@@ -48,11 +48,24 @@ class Alimento
 	@valor = 4*@proteinas+4*@glucidos+9*@grasas
   end
 
+#Calcula el área incremental bajo la curva a partir de un vector de datos
 
-  def aibc datos
+  def aibc i
     s = []
-        datos[1..datos.length-1].zip(datos[0..datos.length-2]) { |x,y| s << (((x-datos[0])+(y-datos[0]))/2)*5 }
+        datos[i][1..datos[i].length-1].zip(datos[i][0..datos[i].length-2]) do	 |x,y|
+		if x < datos[i][0]
+			s << 0.0
+		else
+			s << (((x-datos[i][0])+(y-datos[i][0]))/2)*5 
+
+		end
+	end
+		
         s.reduce(:+)
+
+
+
+
  end
 
 

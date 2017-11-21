@@ -136,17 +136,17 @@ context "Comprobar el cálculo del aibc, el indice glucémico de un individuo y 
 
 
 
-		@ig_ind_m0 = ((@c_manzana.aibc @c_manzana.datos[0])/(@azucar.aibc @azucar.datos[0]))*100
+		@ig_ind_m0 = ((@c_manzana.aibc(0))/(@azucar.aibc(0)))*100
 
-		@ig_ind_m1 = ((@c_manzana.aibc @c_manzana.datos[1])/(@azucar.aibc @azucar.datos[1]))*100
+		@ig_ind_m1 = ((@c_manzana.aibc(1))/(@azucar.aibc(1)))*100
 
 
 		@ig_manzana = (@ig_ind_m0+@ig_ind_m1)/2
 
 		
-		@ig_ind_y0 = ((@yogurt.aibc @yogurt.datos[0])/(@azucar.aibc @azucar.datos[0]))*100
+		@ig_ind_y0 = ((@yogurt.aibc(0))/(@azucar.aibc(0)))*100
 
-                @ig_ind_y1 = ((@yogurt.aibc @yogurt.datos[1])/(@azucar.aibc @azucar.datos[1]))*100
+               @ig_ind_y1 = ((@yogurt.aibc(1))/(@azucar.aibc(1)))*100
 
 
                 @ig_yogurt = (@ig_ind_y0+@ig_ind_y1)/2
@@ -163,22 +163,22 @@ context "Comprobar el cálculo del aibc, el indice glucémico de un individuo y 
 
 
 	it "Comprobar que realiza el aibc" do
-		expect(@c_manzana.aibc @c_manzana.datos[0]).to eq(27.49999999999999)
-		expect(@yogurt.aibc @yogurt.datos[0]).to eq(21.750000000000046)
+		expect(@c_manzana.aibc(0)).to eq(27.999999999999993)
+		expect(@yogurt.aibc(0)).to eq(30.500000000000036)
 	end
 
 
 	it "Comprobar que calcula el indice glucémico del individuo 0 " do
-		expect(@ig_ind_m0).to eq(10.742187499999996)
-		expect(@ig_ind_m1).to eq(98.25737265415549)
+		expect(@ig_ind_m0).to eq(10.937499999999998)
+		expect(@ig_ind_m1).to eq(93.49489795918366)
 	end
 	
 
 
 
 	it "Comprobar que calcula el indice glucemico de un alimento" do
-		expect(@ig_manzana).to eq(54.499780077077745)
-		expect(@ig_yogurt).to eq(41.37941416722519)
+		expect(@ig_manzana).to eq(52.21619897959183)
+		expect(@ig_yogurt).to eq(41.28866390306122)
 	end
 
 

@@ -115,7 +115,7 @@ href="Alimento.html">Alimento</a> Se ha incluido Comparable</p>
         
         <div class="method-heading">
           <span class="method-name">new</span><span
-            class="method-args">(nombre,proteinas,glucidos,grasas,tipo)</span>
+            class="method-args">(nombre,proteinas,glucidos,grasas,datos,tipo)</span>
           
           <span class="method-click-advice">click to toggle source</span>
           
@@ -135,9 +135,9 @@ href="Alimento.html">Alimento</a> Se ha incluido Comparable</p>
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File lib/nutrientes/alimento.rb, line 74</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">nombre</span>,<span class="ruby-identifier">proteinas</span>,<span class="ruby-identifier">glucidos</span>,<span class="ruby-identifier">grasas</span>,<span class="ruby-identifier">tipo</span>)
-        <span class="ruby-keyword">super</span>(<span class="ruby-identifier">nombre</span>,<span class="ruby-identifier">proteinas</span>,<span class="ruby-identifier">glucidos</span>,<span class="ruby-identifier">grasas</span>)
+            <pre><span class="ruby-comment"># File lib/nutrientes/alimento.rb, line 104</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">nombre</span>,<span class="ruby-identifier">proteinas</span>,<span class="ruby-identifier">glucidos</span>,<span class="ruby-identifier">grasas</span>,<span class="ruby-identifier">datos</span>,<span class="ruby-identifier">tipo</span>)
+        <span class="ruby-keyword">super</span>(<span class="ruby-identifier">nombre</span>,<span class="ruby-identifier">proteinas</span>,<span class="ruby-identifier">glucidos</span>,<span class="ruby-identifier">grasas</span>,<span class="ruby-identifier">datos</span>)
         <span class="ruby-ivar">@tipo_a</span> = <span class="ruby-identifier">tipo</span>
 <span class="ruby-keyword">end</span></pre>
           </div>
