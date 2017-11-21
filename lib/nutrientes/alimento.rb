@@ -55,16 +55,6 @@ class Alimento
         s.reduce(:+)
  end
 
-def ig_ind datos
-        (aibc(datos[0]) / aibc(datos[1]))*100
- end
-    
-
-def ig_alimento
-     s = @datos.map { |x| ig_ind(x) }
-        s.reduce(:+)/@datos.length
-        
-end
 
 
 
