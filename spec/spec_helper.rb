@@ -1,3 +1,5 @@
+require "coveralls"
+Coveralls.wear!
 require "bundler/setup"
 require "nutrientes"
 require_relative "../lib/nutrientes/lista.rb"
@@ -12,3 +14,4 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 end
+
