@@ -229,6 +229,10 @@ context "Comprobar el rendimiento de un algoritmo implementado usando bucles for
         end
 
 
+	it "Comprobar que el método implementado con el método sort funciona" do
+                expect(@vector.sort[0].to_s).to eq("Tomate\t1.0\t3.5\t0.2")
+                expect(@vector.sort[@vector.length-1].to_s).to eq("Aceite de oliva\t0.0\t0.2\t99.6")
+        end
 
 
 
