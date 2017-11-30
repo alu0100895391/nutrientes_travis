@@ -8,4 +8,4 @@ Esta práctica de laboratorio se ha de realizar utilizando la herramienta de ges
 Bundler y la metodología de Desarrollo dirigido por pruebas.
 
 La clave de esta práctica está en diseñar pruebas (expectativas) que dirijan el desarrollo y si
-reutiliza otros desarrollos estará haciéndolo mal.. 
+reutiliza otros desarrollos estará haciéndolo mal. 
