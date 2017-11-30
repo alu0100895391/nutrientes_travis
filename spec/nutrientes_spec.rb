@@ -219,7 +219,7 @@ context "Comprobar el rendimiento de un algoritmo implementado usando bucles for
         end
 
 	it "Comprobar que el método implementado con for funciona" do
-		expect(@vector.for[0].to_s).to eq("Tomate\t1.0\t3.5\t0.2")
+		expect(@vector.ord_burbuja[0].to_s).to eq("Tomate\t1.0\t3.5\t0.2")
 	end
 
 

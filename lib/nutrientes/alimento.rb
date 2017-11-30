@@ -108,3 +108,31 @@ class Tipo_alimento  < Alimento
 	end
 
 end
+
+
+
+
+
+class Array
+    
+   
+    
+    
+    def ord_burbuja 
+   	vector=self 
+        for i in 2..vector.count-1
+            for j in 0..vector.count-i
+           
+                if vector[j] > vector[j+1]
+                    x = vector[j]
+                    vector[j] = vector[j+1]
+                    vector[j+1] = x
+                end
+            end
+        end
+	vector
+    end
+    
+
+end
+
