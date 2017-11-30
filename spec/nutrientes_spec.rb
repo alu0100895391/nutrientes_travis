@@ -186,6 +186,49 @@ context "Comprobar el cálculo del aibc, el indice glucémico de un individuo y 
 
 end
 
+context "Comprobar el rendimiento de un algoritmo implementado usando bucles for, el método each y el método sort" do
+
+	  before :each do
+
+	@vector = [ Tipo_alimento.new("Huevo frito", 14.1,0.0,19.5,nil, "Huevos, lcteos y helados"),
+            Tipo_alimento.new("Leche vaca", 3.3,4.8,3.2,nil, "Huevos, lacteos y helados"),
+            Tipo_alimento.new("Yogurt", 3.8, 4.9, 3.8,nil, "Huevos, lacteos y helados"),
+            Tipo_alimento.new("Cerdo", 21.5, 0.0, 6.3,nil, "Carnes y derivados"),
+            Tipo_alimento.new("Ternera", 21.1, 0.0, 3.1,nil, "Carnes y derivados"),
+            Tipo_alimento.new("Pollo",20.6, 0.0, 5.6,nil, "Carnes y derivados"),
+            Tipo_alimento.new("Bacalao",  17.7, 0.0, 0.4,nil, "Pescados y mariscos"),
+            Tipo_alimento.new("Atun", 21.5, 0.0, 15.5,nil, "Pescados y mariscos"),
+            Tipo_alimento.new("Salmon",  19.9, 0.0, 13.6,nil, "Pescados y mariscos"),
+            Tipo_alimento.new("Aceite de oliva", 0.0, 0.2, 99.6,nil, "Alimentos grasos"),
+            Tipo_alimento.new("Mantequilla", 0.7, 0.0, 83.2,nil, "Alimentos grasos"),
+            Tipo_alimento.new("Chocolate", 5.3, 47.0, 30.0,nil, "Alimentos grasos"),
+            Tipo_alimento.new("Azucar", 0.0, 99.8, 0.0,nil, "Alimentos ricos en carbohidratos"),
+            Tipo_alimento.new("Arroz",6.8, 77.7, 0.6,nil, "Alimentos ricos en carbohidratos"),
+            Tipo_alimento.new("Lentejas",  23.5, 52.0, 1.4,nil, "Alimentos ricos en carbohidratos"),
+            Tipo_alimento.new("Papas",2.0, 15.4, 0.1,nil, "Alimentos ricos en carbohidratos"),
+            Tipo_alimento.new("Tomate", 1.0, 3.5, 0.2,nil, "Verduras y Hortalizas"),
+            Tipo_alimento.new("Cebolla", 1.3, 5.8, 0.3,nil, "Verduras y Hortalizas"),
+            Tipo_alimento.new("Calabaza", 1.1, 4.8, 0.1,nil, "Verduras y Hortalizas"),
+            Tipo_alimento.new("Manzanas", 0.3, 12.4, 0.4,nil, "Frutas"),
+            Tipo_alimento.new("Platanos", 1.2, 21.4, 0.2,nil, "Frutas"),
+            Tipo_alimento.new("Pera",  0.5, 12.7, 0.3,nil, "Frutas") ]
+
+
+
+
+        end
+
+	it "Comprobar que el método implementado con for funciona" do
+		expect(@vector.for[0].to_s).to eq("Tomate\t1.0\t3.5\t0.2")
+	end
+
+
+end
+
+
+
+
+
 
 
 end
