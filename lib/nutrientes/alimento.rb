@@ -132,6 +132,30 @@ class Array
         end
 	vector
     end
+
+
+
+
+
+
+    def ord_each
+     vector=self 
+        (2..vector.count).each do |i|
+              ind=0
+              
+            vector.take(vector.count-1).each do |j|
+                if j > vector[ind+1]
+                    x = vector[ind]
+                    vector[ind] = vector[ind+1]
+                    vector[ind+1] = x
+                end
+                ind=ind+1
+            end
+        end
+        vector
+        
+    end
+
     
 
 end
