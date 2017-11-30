@@ -220,7 +220,16 @@ context "Comprobar el rendimiento de un algoritmo implementado usando bucles for
 
 	it "Comprobar que el método implementado con for funciona" do
 		expect(@vector.ord_burbuja[0].to_s).to eq("Tomate\t1.0\t3.5\t0.2")
+		expect(@vector.ord_burbuja[@vector.length-1].to_s).to eq("Aceite de oliva\t0.0\t0.2\t99.6")
 	end
+
+	        it "Comprobar que el método implementado con el método each funciona" do
+                expect(@vector.ord_each[0].to_s).to eq("Tomate\t1.0\t3.5\t0.2")
+                expect(@vector.ord_each[@vector.length-1].to_s).to eq("Aceite de oliva\t0.0\t0.2\t99.6")
+        end
+
+
+
 
 
 end
