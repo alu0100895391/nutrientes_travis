@@ -1,5 +1,5 @@
 require "spec_helper"
-
+include Benchmark
 RSpec.describe Nutrientes do
   it "has a version number" do
     expect(Nutrientes::VERSION).not_to be nil
@@ -234,6 +234,15 @@ context "Comprobar el rendimiento de un algoritmo implementado usando bucles for
                 expect(@vector.sort[@vector.length-1].to_s).to eq("Aceite de oliva\t0.0\t0.2\t99.6")
         end
 
+	
+	   it "Testing benchmark" do
+            Benchmark.benchmark(CAPTION, 7, FORMAT) do |x|
+                a = x.report(">> for") { @vector.ord_burbuja} 
+                b = x.report(">> each") { @vector.ord_burbuja}
+                c = x.report(">> sort") { @vector.ord_burbuja}
+                                                                                             
+            end
+      end
 
 
 end
