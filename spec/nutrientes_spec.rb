@@ -238,8 +238,8 @@ context "Comprobar el rendimiento de un algoritmo implementado usando bucles for
 	   it "Testing benchmark" do
             Benchmark.benchmark(CAPTION, 7, FORMAT) do |x|
                 a = x.report(">> for") { @vector.ord_burbuja} 
-                b = x.report(">> each") { @vector.ord_burbuja}
-                c = x.report(">> sort") { @vector.ord_burbuja}
+                b = x.report(">> each") { @vector.ord_each}
+                c = x.report(">> sort") { @vector.sort}
                                                                                              
             end
       end
